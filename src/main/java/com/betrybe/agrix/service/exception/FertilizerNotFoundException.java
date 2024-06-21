@@ -2,7 +2,7 @@ package com.betrybe.agrix.service.exception;
 
 
 /**
- * Excption to Fetilizer.
+ * Exception to Fetilizer.
  */
 public class FertilizerNotFoundException extends NotFoundException {
 
