@@ -8,10 +8,16 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 
+/**
+ * Disable default springSecurity to userLogin with stateless.
+ */
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
 
+  /**
+   * Disable default springSecurity to userLogin.
+   */
   @Bean
   public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
     return  httpSecurity

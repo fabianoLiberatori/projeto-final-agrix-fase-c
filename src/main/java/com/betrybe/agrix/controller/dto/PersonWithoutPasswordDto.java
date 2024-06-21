@@ -4,23 +4,21 @@ import com.betrybe.agrix.model.entity.Person;
 import com.betrybe.agrix.security.Role;
 
 /**
- * Methords fromEntity'n'toDTO by Person.
+ * Methords fromEntity'n'toDTO by Person without password.
  */
-public record PersonDto(
+public record PersonWithoutPasswordDto(
     Long id,
     String username,
-    String password,
     Role role
 ) {
 
   /**
    * Returns by Entity to DTO.
    */
-  public static PersonDto fromEntity(Person person) {
-    return new PersonDto(
+  public static PersonWithoutPasswordDto fromEntity(Person person) {
+    return new PersonWithoutPasswordDto(
         person.getId(),
         person.getUsername(),
-        person.getPassword(),
         person.getRole()
     );
   }
@@ -31,7 +29,6 @@ public record PersonDto(
   public Person toEntity() {
     Person person = new Person();
     person.setUsername(username);
-    person.setPassword(password);
     person.setRole(role);
     return person;
   }
